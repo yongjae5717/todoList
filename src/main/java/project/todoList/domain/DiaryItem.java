@@ -18,4 +18,7 @@ public class DiaryItem {
 
     private String content;
 
+    private void change_content(String changing_content){
+        this.content = changing_content;
+    }
 }

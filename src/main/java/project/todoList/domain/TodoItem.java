@@ -25,5 +25,13 @@ public class TodoItem {
 
     private String content;
 
+    //==비지니스 로직 추가==//
+    private void check(){
+        status = TodoStatus.SUCCESS;
+    }
+
+    private void change_content(String changing_content){
+        this.content = changing_content;
+    }
 
 }

@@ -36,4 +36,5 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status; //주문상태 [DIARY, TODOLIST]
 
+
 }
