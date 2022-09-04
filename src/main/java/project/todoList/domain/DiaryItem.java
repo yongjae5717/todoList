@@ -11,9 +11,9 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Diary {
+public class DiaryItem {
     @Id
-    @Column(name = "diary_id", nullable = false)
+    @Column(name = "diary_item_id", nullable = false)
     private Long id;
 
     private String content;

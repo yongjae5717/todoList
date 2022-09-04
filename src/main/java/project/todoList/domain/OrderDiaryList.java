@@ -18,11 +18,11 @@ public class OrderDiaryList {
     private Long id;
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "diary_diary_id")
-    private Diary diary;
+    @JoinColumn(name = "diary_id")
+    private DiaryItem diary;
 
     @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "order_order_id")
+    @JoinColumn(name = "order_id")
     private Order order;
 
     private String diaryContent;

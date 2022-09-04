@@ -24,11 +24,11 @@ public class Order {
     private Member member;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order")
     private List<OrderDiaryList> orderDiaryLists = new ArrayList<>();
 
     @JsonIgnore
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order")
     private List<OrderTodoList> orderTodoLists = new ArrayList<>();
 
     private LocalDateTime orderDate;
