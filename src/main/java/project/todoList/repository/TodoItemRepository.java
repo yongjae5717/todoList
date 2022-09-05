@@ -14,11 +14,11 @@ public class TodoItemRepository {
     private final EntityManager em;
 
     // 아이템 저장
-    public void save(TodoItem item){
-        if(item.getId() == null){
-            em.persist(item);
+    public void save(TodoItem todoItem){
+        if(todoItem.getId() == null){
+            em.persist(todoItem);
         } else{
-            em.merge(item); //update와 비슷하다.
+            em.merge(todoItem); //update와 비슷하다.
         }
     }
 

@@ -7,8 +7,6 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-import static javax.persistence.FetchType.LAZY;
-
 @Getter
 @Setter
 @Entity
@@ -22,6 +20,8 @@ public class TodoItem {
 
     private LocalDateTime updateDate;
 
+    private LocalDateTime createDate;
+
     @Enumerated(EnumType.STRING)
     private TodoStatus status; //주문상태 [SUCCESS, FAIL]
 
@@ -32,8 +32,13 @@ public class TodoItem {
         status = TodoStatus.SUCCESS;
     }
 
-    private void change_content(String changing_content){
-        this.content = changing_content;
+
+    //==비지니스 로직 ==//
+    //수정 로직
+    public void change(String newName, String newContent){
+        this.name = newName;
+        this.content = newContent;
+        this.updateDate = LocalDateTime.now();
     }
 
 }

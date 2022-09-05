@@ -14,11 +14,11 @@ public class DiaryItemRepository {
     private final EntityManager em;
 
     // 아이템 저장
-    public void save(DiaryItem item){
-        if(item.getId() == null){
-            em.persist(item);
+    public void save(DiaryItem diaryItem){
+        if(diaryItem.getId() == null){
+            em.persist(diaryItem);
         } else{
-            em.merge(item); //update와 비슷하다.
+            em.merge(diaryItem); //update와 비슷하다.
         }
     }
 

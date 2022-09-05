@@ -26,9 +26,23 @@ public class OrderTodoList {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    private String orderName;
+    private String todoName;
 
-    private String orderContent;
+    private String todoContent;
 
+    //==생성 메서드==//
+    public static OrderTodoList createOrderTodoList(TodoItem todoItem, String name, String content){
+        OrderTodoList orderTodoList = new OrderTodoList();
+        orderTodoList.setTodoItem(todoItem);
+        orderTodoList.setTodoName(name);
+        orderTodoList.setTodoContent(content);
+
+        return orderTodoList;
+    }
+
+    //==비지니스 로직 추가==//
+    public void changeContent(String name, String content) {
+        getTodoItem().change(name, content);
+    }
 
 }
