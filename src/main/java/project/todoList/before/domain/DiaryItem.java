@@ -1,4 +1,4 @@
-package project.todoList.domain;
+package project.todoList.before.domain;
 
 import lombok.Getter;
 import lombok.Setter;

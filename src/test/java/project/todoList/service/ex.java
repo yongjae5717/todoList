@@ -7,21 +7,46 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 import project.todoList.before.domain.Member;
+import project.todoList.before.domain.TodoItem;
+import project.todoList.before.domain.TodoStatus;
 import project.todoList.before.repository.MemberRepository;
+import project.todoList.before.repository.TodoItemRepository;
 import project.todoList.before.service.MemberService;
+
+import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class MemberServiceTest {
+public class ex {
 
     @Autowired
     MemberRepository memberRepository;
     @Autowired
     MemberService memberService;
 
+    @Autowired
+    TodoItemRepository todoItemRepository;
+
+    @Test
+    public void 테스트(){
+        TodoItem todoItem = new TodoItem();
+
+        //생성자
+        todoItem.setName("이거 할거에요");
+        todoItem.setContent(",....dfsof");
+        todoItem.setStatus(TodoStatus.FAIL);
+        todoItem.setUpdateDate(LocalDateTime.now());
+        todoItem.setCreateDate(LocalDateTime.now());
+
+        //테이블 생성
+        todoItemRepository.save(todoItem);
+
+        //비지니스 로직 (수정)
+        todoItem.change("변경이름", "변경내용");
+    }
     @Test
 //    @Rollback(value = false) //Transactional으로 인한 Rollback True
     public void 회원가입() throws Exception{

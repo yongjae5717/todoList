@@ -1,4 +1,4 @@
-package project.todoList.domain;
+package project.todoList.before.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -14,7 +14,7 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter @Setter
-public class Order {
+public class Order{
     @Id
     @Column(name = "order_id", nullable = false)
     private Long id;

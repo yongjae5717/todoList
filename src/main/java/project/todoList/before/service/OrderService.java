@@ -1,14 +1,12 @@
-package project.todoList.service;
+package project.todoList.before.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import project.todoList.domain.DiaryItem;
-import project.todoList.domain.Member;
-import project.todoList.repository.DiaryItemRepository;
-import project.todoList.repository.MemberRepository;
-import project.todoList.repository.OrderRepository;
-import project.todoList.repository.TodoItemRepository;
+import project.todoList.before.repository.DiaryItemRepository;
+import project.todoList.before.repository.MemberRepository;
+import project.todoList.before.repository.OrderRepository;
+import project.todoList.before.repository.TodoItemRepository;
 
 @Service
 @Transactional(readOnly = true)
@@ -27,5 +25,4 @@ public class OrderService {
 //
 //        //다이어리 생성
 //    }
-
 }

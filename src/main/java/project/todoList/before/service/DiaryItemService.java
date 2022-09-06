@@ -1,10 +1,10 @@
-package project.todoList.service;
+package project.todoList.before.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import project.todoList.domain.DiaryItem;
-import project.todoList.repository.DiaryItemRepository;
+import project.todoList.before.domain.DiaryItem;
+import project.todoList.before.repository.DiaryItemRepository;
 
 
 import java.util.List;

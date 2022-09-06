@@ -1,4 +1,4 @@
-package project.todoList.domain;
+package project.todoList.before.domain;
 
 
 import lombok.Getter;
@@ -26,6 +26,18 @@ public class TodoItem {
     private TodoStatus status; //주문상태 [SUCCESS, FAIL]
 
     private String content;
+
+    //==생성자==//
+    public TodoItem() {
+    }
+
+    public TodoItem(String name, LocalDateTime updateDate, LocalDateTime createDate, TodoStatus status, String content) {
+        this.name = name;
+        this.updateDate = updateDate;
+        this.createDate = createDate;
+        this.status = status;
+        this.content = content;
+    }
 
     //==비지니스 로직 추가==//
     private void check(){

@@ -1,8 +1,8 @@
-package project.todoList.repository;
+package project.todoList.before.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import project.todoList.domain.DiaryItem;
+import project.todoList.before.domain.DiaryItem;
 
 
 import javax.persistence.EntityManager;

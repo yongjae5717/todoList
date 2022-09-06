@@ -1,4 +1,4 @@
-package project.todoList.domain;
+package project.todoList.before.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;

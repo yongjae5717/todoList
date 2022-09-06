@@ -1,4 +1,4 @@
-package project.todoList.domain;
+package project.todoList.before.domain;
 
 public enum OrderStatus {
     DIARY, TODOLIST
