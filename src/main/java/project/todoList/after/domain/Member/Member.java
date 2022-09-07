@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import project.todoList.after.domain.TodoList.OrderTodoList;
+import project.todoList.after.domain.Diary.OrderDiaryList;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -25,4 +26,8 @@ public class Member {
     @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<OrderTodoList> orderTodoLists = new ArrayList<>();
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "member")
+    private List<OrderDiaryList> orderDiaryLists = new ArrayList<>();
 }
