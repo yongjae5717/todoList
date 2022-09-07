@@ -14,6 +14,7 @@ import java.util.List;
 import static javax.persistence.FetchType.LAZY;
 
 @Entity
+@Table(name = "orderDiaryLists")
 @Getter
 @Setter
 public class OrderDiaryList {
