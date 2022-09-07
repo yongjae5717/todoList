@@ -34,6 +34,8 @@ public class OrderDiaryList {
     @OneToMany(mappedBy = "orderDiaryList", cascade = CascadeType.ALL)
     private List<DiaryListToItem> diaryListToItems = new ArrayList<>();
 
+    private Long practice;
+
     private LocalDateTime orderDate;
 
 
