@@ -29,9 +29,13 @@ public class OrderTodoList {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "todo_item_id")
+    private TodoItem todoItem;
+
     @JsonIgnore
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<project.todoList.after.domain.TodoList.TodoListToItem> todoListToItems = new ArrayList<>();
+    @OneToMany(mappedBy = "orderTodoList", cascade = CascadeType.ALL)
+    private List<TodoListToItem> todoListToItems = new ArrayList<>();
 
     private LocalDateTime orderDate;
 
@@ -48,7 +52,7 @@ public class OrderTodoList {
 
     //==생성 메서드==//
 
-    public static OrderTodoList createTodoOrder(Member member, project.todoList.after.domain.TodoList.TodoListToItem... todoListToItems){
+    public static OrderTodoList createTodoOrder(Member member, TodoListToItem... todoListToItems){
         //order생성
         OrderTodoList order = new OrderTodoList();
         //order세팅

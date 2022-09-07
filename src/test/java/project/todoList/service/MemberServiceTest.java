@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import project.todoList.before.domain.Member;
-import project.todoList.before.repository.MemberRepository;
-import project.todoList.before.service.MemberService;
+import project.todoList.after.domain.Member.Member;
+import project.todoList.after.repository.MemberRepository;
+import project.todoList.after.service.MemberService;
 
 import static org.junit.jupiter.api.Assertions.*;
 

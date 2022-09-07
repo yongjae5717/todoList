@@ -6,12 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
-import project.todoList.before.domain.Member;
-import project.todoList.before.domain.TodoItem;
-import project.todoList.before.domain.TodoStatus;
-import project.todoList.before.repository.MemberRepository;
-import project.todoList.before.repository.TodoItemRepository;
-import project.todoList.before.service.MemberService;
+import project.todoList.after.domain.Member.Member;
+import project.todoList.after.domain.TodoList.TodoItem;
+import project.todoList.after.repository.MemberRepository;
+import project.todoList.after.repository.TodoItemRepository;
+import project.todoList.after.service.MemberService;
 
 import java.time.LocalDateTime;
 
@@ -35,9 +34,7 @@ public class ex {
         TodoItem todoItem = new TodoItem();
 
         //생성자
-        todoItem.setName("이거 할거에요");
         todoItem.setContent(",....dfsof");
-        todoItem.setStatus(TodoStatus.FAIL);
         todoItem.setUpdateDate(LocalDateTime.now());
         todoItem.setCreateDate(LocalDateTime.now());
 
@@ -45,7 +42,7 @@ public class ex {
         todoItemRepository.save(todoItem);
 
         //비지니스 로직 (수정)
-        todoItem.change("변경이름", "변경내용");
+        todoItem.changeContent("변경내용");
     }
     @Test
 //    @Rollback(value = false) //Transactional으로 인한 Rollback True
